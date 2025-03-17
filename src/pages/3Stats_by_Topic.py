@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-df = pd.read_csv("/GAO_for streamlit.csv").drop_duplicates(subset=['Case No','Recommendation','Agency Affected']).drop(columns="Unnamed: 0")
+df = pd.read_csv("src/pages/GAO_for streamlit.csv").drop_duplicates(subset=['Case No','Recommendation','Agency Affected']).drop(columns="Unnamed: 0")
 df['Sub Topics']=df['Sub Topics'].astype(str)
 df=df[~df['Year'].isin([2008,2025])]
 

@@ -3,7 +3,7 @@ import streamlit as st
 
 
 #@st.cache_data
-df = pd.read_csv("../src/GAO_for streamlit.csv").drop_duplicates(subset=['Case No','Recommendation','Agency Affected']).drop(columns="Unnamed: 0")
+df = pd.read_csv("src/pages/GAO_for streamlit.csv").drop_duplicates(subset=['Case No','Recommendation','Agency Affected']).drop(columns="Unnamed: 0")
 df['Sub Topics']=df['Sub Topics'].astype(str)
 
 def apply_filters(df):
