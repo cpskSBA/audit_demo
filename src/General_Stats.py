@@ -23,7 +23,7 @@ st.header(page_title)
 
 #@st.cache_data
 #df0 = pd.read_csv(r"C:\Users\cpsolerkanchumarthy\OneDrive - U.S. Small Business Administration\Desktop\repositories\audit_demo\src\GAO_for streamlit.csv").drop_duplicates(subset=['Case No','Recommendation','Agency Affected']).drop(columns="Unnamed: 0")
-df0 = pd.read_csv("GAO_for streamlit.csv").drop_duplicates(subset=['Case No','Recommendation','Agency Affected']).drop(columns="Unnamed: 0")
+df0 = pd.read_csv("src/GAO_for streamlit.csv").drop_duplicates(subset=['Case No','Recommendation','Agency Affected']).drop(columns="Unnamed: 0")
 
 df0=df0.sort_values(by='Agency Type',ascending=False)
 
