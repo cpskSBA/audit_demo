@@ -22,7 +22,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 st.header(page_title)
 
 #@st.cache_data
-df0 = pd.read_csv(r"C:\Users\cpsolerkanchumarthy\OneDrive - U.S. Small Business Administration\Desktop\repositories\audit_demo\GAO_for streamlit.csv").drop_duplicates(subset=['Case No','Recommendation','Agency Affected']).drop(columns="Unnamed: 0")
+df0 = pd.read_csv(r"C:\Users\cpsolerkanchumarthy\OneDrive - U.S. Small Business Administration\Desktop\repositories\audit_demo\src\GAO_for streamlit.csv").drop_duplicates(subset=['Case No','Recommendation','Agency Affected']).drop(columns="Unnamed: 0")
 df0=df0.sort_values(by='Agency Type',ascending=False)
 
 df=df0[~df0['Year'].isin([2008,2025])]

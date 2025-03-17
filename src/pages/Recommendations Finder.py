@@ -3,7 +3,7 @@ import streamlit as st
 
 
 #@st.cache_data
-df = pd.read_csv(r"C:\Users\cpsolerkanchumarthy\OneDrive - U.S. Small Business Administration\Desktop\repositories\audit_demo\GAO_for streamlit.csv")
+df = pd.read_csv(r"C:\Users\cpsolerkanchumarthy\OneDrive - U.S. Small Business Administration\Desktop\repositories\audit_demo\src\GAO_for streamlit.csv")
 df['Sub Topics']=df['Sub Topics'].astype(str)
 
 def apply_filters(df):
