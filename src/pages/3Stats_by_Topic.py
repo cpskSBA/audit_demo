@@ -12,8 +12,6 @@ def apply_filters(df):
 
     min_year,max_year=int(filtered_df['Year'].min()),int(filtered_df['Year'].max())
     selected_year = st.sidebar.slider('Select Year Range',min_value=min_year, max_value=max_year, value=(min_year,max_year))
-   
-    
     filtered_df= filtered_df[(filtered_df['Year']>= selected_year[0])& (filtered_df['Year'] <=selected_year[1])]
 
 
