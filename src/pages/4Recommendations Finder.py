@@ -16,6 +16,9 @@ def apply_filters(df):
     selected_year = st.sidebar.slider('Select Year Range',min_value=min_year, max_value=max_year, value=(min_year,max_year))
     filtered_df= filtered_df[(filtered_df['Year']>= selected_year[0])& (filtered_df['Year'] <=selected_year[1])]
 
+    selected_status = st.sidebar.multiselect('Filter by Recommendation Status', options=sorted(filtered_df['Status'].dropna().unique()))
+    if selected_status:
+        filtered_df=filtered_df[filtered_df['Status'].isin(selected_status)]
 
     selected_agency = st.sidebar.multiselect('Filter by Agency', options=sorted(filtered_df['Agency Affected'].dropna().unique()))
     if selected_agency:
